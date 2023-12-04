@@ -1,0 +1,122 @@
+.card__nobg-button {
+  background-color: #ffffff;
+  border: none;
+  margin-top: 1rem;
+  font-size: 12px;
+}
+
+.card__save-button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: .25rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 12px;
+}
+
+.card__save-button:hover {
+  background-color: #dddce2;
+  width: 2rem;
+}
+
+.card__read-button {
+  font-size: 10px;
+}
+
+.card__tittle {
+  text-decoration: none;
+  color: #171717d8;
+  margin: 0 1rem 1rem 0;
+  font-weight: bold;
+}
+
+.card__tittle:hover {
+  color: #3b49df;
+}
+
+.card:not(:first-of-type) .img-none {
+  display: none;
+}
+
+.cover-container__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+
+.card__post-tittle {
+  font-size: 3rem;
+  -webkit-transition: ease;
+  transition: ease;
+}
+
+.card-body {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.card-body:hover {
+  border-color: #3b49df;
+  border-width: 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cover-container {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #171717d8;
+  margin: 0 1rem 1rem 0;
+}
+
+.card__green-bg {
+  background-color: rgba(26, 214, 67, 0.1);
+  border-color: rgba(214, 54, 26, 0.87);
+  border-radius: .2rem;
+}
+
+.card__green-bg:hover {
+  background-color: rgba(26, 214, 67, 0.584);
+}
+
+.card__green-bg:hover .card {
+  margin-bottom: 1rem;
+}
+
+.card__green-bg:hover .card .card__tags {
+  background-color: #ffffff;
+  border: none;
+  border-radius: .5rem;
+  margin-right: 1rem;
+}
+
+.card__green-bg:hover .card .card__btn-aux {
+  margin-right: 1rem;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #171717;
+}
+
+.card__green-bg:hover .card__btn-submit {
+  margin-right: 1rem;
+  background-color: #3b49df;
+}
+
+.card__green-bg:hover__username-container h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card__green-bg:hover__username-container h6:hover {
+  color: #4649df;
+}
+
+.card__green-bg:hover__username-container a:hover {
+  color: #4649df;
+}
+/*# sourceMappingURL=postContainer.css.map */

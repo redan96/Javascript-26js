@@ -1,0 +1,132 @@
+$font-style: 'Open Sans', sans-serif;
+$font-accents-color: #4649df;
+$main-bg-color: #ffffff;
+$card-bg-color: #c5c5c5;
+$primary-button-bg: #3b49df;
+$secondary-button-bg: #bdbdbd;
+$secondary-button-hover: #d6d6d7;
+$disscus-tag-bg: rgba(26, 214, 67, 0.10);
+$regular-text-color: #4f4e53;
+$title-card-color: #171717d8;
+
+
+.card__nobg-button{
+    background-color:$main-bg-color;
+    border:none;
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.card__save-button{
+    background-color:$main-bg-color;
+    border: none;
+    border-radius: .25rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 12px;
+}
+.card__save-button:hover{
+    background-color: #dddce2;
+    width: 2rem;
+}
+
+.card__read-button{
+    font-size: 10px;
+}
+
+.card__tittle{
+    text-decoration: none;
+    color: $title-card-color;
+    margin: 0 1rem 1rem 0;
+    font-weight: bold;
+}
+.card__tittle:hover{
+    color: #3b49df;
+}
+.card:not(:first-of-type) .img-none{display:none}
+
+.cover-container__image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.card__post-tittle{
+    font-size: 3rem ;
+    transition: ease;
+}
+
+.card-body{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.card-body:hover {
+    border-color: #3b49df;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cover-container{
+    margin-bottom: 1rem;   
+}
+
+a{
+    text-decoration: none;
+    color: $title-card-color;
+    margin: 0 1rem 1rem 0;
+}
+
+.card__green-bg{
+    background-color: $disscus-tag-bg;
+    border-color: rgba(214, 54, 26, 0.87);
+    border-radius: .2rem; 
+    }
+
+.card__green-bg:hover{
+    background-color: rgba(26, 214, 67, 0.584);
+
+.card{
+     margin-bottom: 1rem;
+     .card__tags{
+        background-color: $main-bg-color;
+        border: none;
+        border-radius: .5rem;
+        margin-right: 1rem;
+        }
+    .card__btn-aux{
+        margin-right: 1rem;
+        border-color: $main-bg-color;
+        background-color: $main-bg-color;
+        color: #171717;
+        }
+
+    }
+
+
+
+        .card__btn-submit{
+            margin-right: 1rem;
+            background-color: $primary-button-bg;
+        }
+
+        &__username-container{
+            h6{
+                font-size: 1.2rem;
+                font-weight: bold;
+                &:hover{
+                    color:$font-accents-color;
+                }
+            }
+
+            a{
+                &:hover{
+                    color:$font-accents-color;
+                }
+            }
+
+        }
+    }
+
+
+

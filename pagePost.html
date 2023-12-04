@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/pagePost.js"></script>
+  <title>DevToCopy</title>
+</head>
+<body>
+  <nav class="navbar flex-nowrap navbar-expand-lg bg-body-light shadow-sm container-fluid d-flex p-2 justify-content-between align-items-center nav__container border-bottom">
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <!-- boton offcanvas -->
+          <button class="w-100 mt-1 d-md-none ms-3 me-5 border border-0 navbar-toggler col-2" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- w-75 para el ancho no sea el 100%  -->
+          <!-- offcanvas completo  -->
+          <div class="w-75 offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+               tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+              <!-- titulo de offcanvas  -->
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                DEV Community
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- aqui va el aside de offcanvas -->
+              <aside class="col col-md-4 col-lg-3 d-md-none d-lg-none">
+                <div class="d-md-none">
+                  <ul class="list-group list-group-flush aside__list--item">
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/home-icon.svg" alt="icon home">
+                      <a>Home</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/listings-icon.svg" alt="icon listings">
+                      <a>Listings</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/podcasts-icon.svg" alt="icon podcasts">
+                      <a>Podcasts</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/videos-icon.svg" alt="icon videos">
+                      <a>Videos</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/tags-icon.svg" alt="icon tags">
+                      <a>Tags</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/faq-icon.svg" alt="faq-icon">
+                      <a>FAQ</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/foremShop-icon.svg" alt="forem shop icon">
+                      <a>Forem Shop</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/sponsors-icon.svg" alt="sponsors icon">
+                      <a>Sponsors</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/about-icon.svg" alt="about icon">
+                      <a>About</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/contact-icon.svg" alt="contact icon">
+                      <a>Contact</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/guides-icon.svg" alt="guides icon">
+                      <a>Guides</a>
+                    </li>
+                    <li class="list-group-item rounded-2">
+                      <img src="./images/navbar/softwareComparisons.svg" alt="software Comparisons icon">
+                        <a>Software Comparisons</a>
+                      </li>
+                      <li class="list-group p-3 "><b>Other</b></li>
+                        <li class="list-group-item">
+                          <img src="./images/navbar/codeOfConduct.svg" alt="code of conduct icon">
+                          <a>Code of Conduct</a>
+                        </li>
+                        <li class="list-group-item">
+                          <img src="./images/navbar/privacyPolicy.svg" alt="privacy policy-icon">
+                          <a>Privacy Policy</a>
+                            </li>
+                              <li class="list-group-item">
+                                <img src="./images/navbar/termOfUse-icon.svg" alt="terms of use icon">
+                                <a>Terms of Use</a>
+                              </li>
+                            </ul>
+                              <span class="p-3 d-flex justify-content-between"> 
+                                <a href=" https://twitter.com/thepracticaldev" rel="noopener me">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" role="img"
+                                    aria-labelledby="a2346iciwfnxouf9k10g4fqvndavplp5"
+                                    class="socialNet-icon" fill="currentcolor">
+                                    <title id="a2346iciwfnxouf9k10g4fqvndavplp5">Twitter</title>
+                                    <path
+                                      d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <a href="https://facebook.com/thepracticaldev" rel="noopener me">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" role="img"
+                                    aria-labelledby="apytsuzymhemfs8xzxmc221jvi8cbu5c"
+                                    class="socialNet-icon" fill="currentcolor">
+                                    <title id="apytsuzymhemfs8xzxmc221jvi8cbu5c">Facebook</title>
+                                    <path
+                                      d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <a href="https://github.com/forem" rel="github">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" role="img"
+                                    aria-labelledby="a50jbxpjy1j9e2o4hsmr6x6idbherhky"
+                                    class="socialNet-icon" fill="currentcolor">
+                                    <title id="a50jbxpjy1j9e2o4hsmr6x6idbherhky">Github</title>
+                                    <path
+                                      d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <a href="https://instagram.com/thepracticaldev" rel="instagram">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" role="img"
+                                    aria-labelledby="ahjx30i9evfjxpinjj3chz8dr752f0tg"
+                                    class="socialNet-icon" fill="currentcolor">
+                                    <title id="ahjx30i9evfjxpinjj3chz8dr752f0tg">Instagram</title>
+                                      <path
+                                        d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
+                                      </path>
+                                  </svg>
+                                </a>
+                                <a href="https://twitch.com/thepracticaldev" rel="twitch">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" role="img"
+                                    aria-labelledby="aojtrgj0bwklptc5ny590xzzixi7oaa2"
+                                    class="socialNet-icon" fill="currentcolor">
+                                    <title id="aojtrgj0bwklptc5ny590xzzixi7oaa2">Twitch</title>
+                                    <path
+                                      d="M4.3 3H21v11.7l-4.7 4.7h-3.9l-2.5 2.4H7v-2.4H3V6.2L4.3 3zM5 17.4h4v2.4h.095l2.5-2.4h3.877L19 13.872V5H5v12.4zM15 8h2v4.7h-2V8zm0 0h2v4.7h-2V8zm-5 0h2v4.7h-2V8z">
+                                    </path>
+                                  </svg>
+                                </a>
+                              </span>
+                              <span class="p-3 d-flex justify-content-between">
+                                <b>My Tags</b>
+                                  <a id="tag-priority-link" href="/dashboard/following_tags"
+                                    class="c-link c-link--block c-link--icon-alone"
+                                    aria-label="Customize tag priority" title="Customize tag priority">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                      viewBox="0 0 24 24" role="img" class="socialNetwork-icon"
+                                      fill="currentcolor">
+                                      <path
+                                        d="M12 1l9.5 5.5v11L12 23l-9.5-5.5v-11L12 1zm0 2.311L4.5 7.653v8.694l7.5 4.342 7.5-4.342V7.653L12 3.311zM12 16a4 4 0 110-8 4 4 0 010 8zm0-2a2 2 0 100-4 2 2 0 000 4z">
+                                      </path>
+                                    </svg>
+                                  </a>
+                              </span>
+                              </div>
+                              </div>
+                            </div>
+                        </aside>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Agui va el logotipo  -->
+                <a class="navbar-brand ms-2 col-4 col-md-2" href="./index.html">
+                  <img width="50" height="40" class="" src="./img/logo-devto.png" alt="logotipo">
+                </a>
+              </div>
+              <!--  3 elementos final navbar -->
+              <div class="col-5 d-md-none">
+                <div class="row d-flex justify-content-end align-items-center">
+                  <a class="navbar-brand col-1" href="#">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        aria-labelledby="acqvzhayv8mf3mvwu5y9jj5ugpmn525h" class="crayons-icon">
+                        <title id="acqvzhayv8mf3mvwu5y9jj5ugpmn525h">Search</title>
+                        <path
+                          d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                        </path>
+                      </svg>
+                    </div>
+                  </a>
+                  <!-- icono Notifications -->
+                  <a class="navbar-brand col-1" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                      aria-labelledby="ame3cw79o7hng83z0at59okfmz4a9h74" class="crayons-icon">
+                      <title id="ame3cw79o7hng83z0at59okfmz4a9h74">Notifications</title>
+                      <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z">
+                      </path>
+                    </svg>
+                  </a>
+                  <!-- user-avatar  -->
+                  <a class="navbar-brand col-1 me-5" href="#">
+                    <span class=""><img width="30" height="30" class="rounded-circle" alt="" id="nav-profile-image"
+                      src="https://res.cloudinary.com/practicaldev/image/fetch/s--PszGSfBq--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/857295/983b41ee-246e-434e-987e-5589aaa2717c.jpeg">
+                    </span>
+                  </a>
+                </div>
+              </div>
+             <!-- nuevos elementos en md a desktop  -->
+              <div class="col-md-10 d-none d-md-block ">
+                <div class="container ">
+                  <div class="row justify-content-md-end d-flex align-items-center ">
+                    <!-- barra buscar  -->
+                    <div class="text-center col-md-5 border border-secondary rounded-2 bg-light">
+                      <input class=" border-0 w-75 m-0 bg-light nav__search--input" type="text" name="" placeholder="Search..."
+                        autocomplete="off" aria-label="Search term">
+                        <button class="bg-light border-0 mt-1" type="submit" aria-label="Search"
+                          class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+                          <svg class="bg-light"
+                          xmlns="http://www.w3.org/2000/svg" width="30" height="30" aria-hidden="true" class=""
+                          focusable="false">
+                            <path
+                              d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z">
+                            </path>
+                          </svg>
+                        </button>
+                    </div>
+                    <!-- boton create post -->
+                    <a class="col-md-3 ms-1" href="">
+                      <button class="btn btn-outline-primary button__nav" type="button">Create Post</button>
+                    </a>
+                    <!-- icono Notifications -->
+                    <a class="navbar-brand  col-1" href="#">
+                      <svg class="w-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        role="img" aria-labelledby="ame3cw79o7hng83z0at59okfmz4a9h74" class="crayons-icon">
+                        <title id="ame3cw79o7hng83z0at59okfmz4a9h74">Notifications</title>
+                        <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z">
+                        </path>
+                      </svg>
+                    </a>
+                    <!-- user-avatar  -->
+                    <a class="navbar-brand col-1 me-5" href="#">
+                      <span class=""><img width="30" height="30" class="rounded-circle" alt="" id="nav-profile-image"
+                        src="https://res.cloudinary.com/practicaldev/image/fetch/s--PszGSfBq--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/857295/983b41ee-246e-434e-987e-5589aaa2717c.jpeg">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+  
+    <div class="container ">
+        <div class="row  ms-3 me-3">
+          <aside class="col-md-1 d-none d-sm-none d-md-block d-flex flex-column  mb-3 ms-5  fixed-top aside__left--margintop" >
+             <figure >
+                <img src="./img/icono-corazon.svg" alt="">
+             </figure>
+             <figure class="mt-5">
+                <img src="./img/text-figure.svg" alt="">
+             </figure>
+             <figure class="mt-5">
+                <img src="./img/condecoration-img.svg" alt="">
+             </figure>
+             <figure class="mt-5">
+                <img src="./img/threePoints.svg" alt="">
+              </figure>
+          </aside>
+
+          <main class="col-12 col-md-11 col-xl-8 ml-3 mt-3 ms-1 me-1 mb-5" id="blog-container">
+ <!--            
+              <figure>
+                <img src="./img/img-principal.webp" alt="" class="principal__img">
+
+                <figcaption class="mt-4 ms-4 d-flex" >
+                  <figure class="ms-2">
+                    <img src="./img/main_photo_autor.webp" alt="" class="rounded-circle">
+                  </figure>
+                  <div class="ms-2">
+                    <h5>Mads Stoumann</h5>
+                    <p>posted on 13 may</p>
+                  </div>
+                </figcaption>
+                <div class="ms-5">
+                  <img src="./img/heart.svg" alt="" class="me-5">
+                  <img src="./img/unicorn.svg" alt="" class="me-5">
+                  <img src="./img/fire.svg" alt="">
+                </div>
+              </figure>
+              <article class="post__title">
+                <h1>Mobile-to-Desktop Menu in 2 Lines of CSS</h1>
+                <p><span>#webdev</span><span>#css</span><span>tutorial</span><span>#javasceript</span></p>
+                <section>
+                  <p >
+                    As a frontend developer, I've created numerous menus over the years. These menus have typically been the most intricate element of a website, incorporating mobile interactions, desktop transitions, item reordering, and more. In one instance, I built a mega-menu for a client that was so expansive, users mistook it for an entire webpage due to its full-page coverage.
+                  </p>
+                  <p>
+                    However, in my most recent project, I aimed for simplicity by utilizing some of the latest and greatest CSS features available.
+                                        
+                  </p>
+                  <p>
+                    Let's dive in!
+                  </p>
+                </section>
+                <hr >
+                <section>
+                  <h3>Structure</h3>
+                  <p>
+                    For the markup, the simplest structure I could come up with, that still supported the flexibility needed to go from a mobile flyout to a desktop-menu, was this:
+                  </p>
+                  <img src="./img/imgCodigo1.png" alt="" class="img-fluid rounded mx auto d-block">
+                  <p class="mt-3">
+                    We'll add more classes and stuff later, but this is the basic structure. This version will wor <b>   without any JavaScript </b>, but has an accessibility-issue, we'll look into later as well.
+                  </p>
+                  <p>
+                    The main element, <span> &lt;header&gt;</span> is a flex-container, using justify-content: space-between to place the logo left and the toggler right:
+                  </p>
+                  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9GoYFL0A--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tejyrzfa062x8psal213.png" alt="" class="img-fluid rounded mx auto d-block">
+
+                  <p class="mt-3">
+                    .menu-flyout is the container for two navigation-blocks: one with the main menu-items, and one with CTA's (call-to-actions).
+                  </p>
+                  <p>
+                    The flyout will cover the whole screen when visible, but otherwise be placed off-screen:                    
+                  </p>
+                  <img src="./img/imgCodigo2.png" alt="" class="img-fluid rounded mx auto d-block">
+
+                  <p class="mt-3">
+                    The navigation blocks are both flex-containers with flex-direction set to a custom property:
+                  </p>
+
+                  <img src="./img/imgCodigo3.png" alt="" class="img-fluid rounded mx auto d-block">
+                  <p class="mt-3">
+                    The second navigation block is placed at the bottom, using justify-content: end:
+                  </p>
+                  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--7nDfL2dZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gq78l4h8tl2rhh5fy6h5.png" alt="" class="img-fluid rounded mx auto d-block" >
+
+                  <p class="mt-3">
+                    The toggler is just a styled &lt;input type="checkbox"&gt;. We can use this to reveal the flyout when clicked:
+                  </p>
+                  
+                  <img src="./img/imgCodigo4.png" alt="" class="img-fluid rounded mx auto d-block" >
+                  <img class="mt-3" src="https://res.cloudinary.com/practicaldev/image/fetch/s--dkrsAuID--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jcunvin3sc6z3v85aa9g.png" alt="" class="img-fluid rounded mx auto d-block">
+                  <p class="mt-3">
+                    Since the toggler is wrapped in a label, we can use this to hide it on desktop:
+                  </p>
+
+                  <img src="./img/imgCodigo5.png" alt="" class="img-fluid rounded mx auto d-block">
+                  <p class="mt-3">
+                    <span>NOTE:</span> Don't worry, everything will have classes in the final examples, it's just to simplify the examples, that I use plain tags!
+                  </p>
+                  <hr>
+
+                  <p>
+                    So far, so good. When we resize the screen to desktop, we get:
+                  </p>
+
+                  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LFoZ49QL--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ii6fbddnpnr1wxcuwdw.png" alt="">
+
+                  <p class="mt-3">The demos have a lot more stuff going on (transitions, clamped gaps, hover etc.) than I showcased in this article.</p>
+                  <p>Open them on Codepen to see the full-width desktop-view — fork them — and play around with them.</p>
+                  <p>Let me know what you think in the comments.</p>
+                  <p>Photo by <a href="">Brett Sayles</a></p>
+
+                </section>
+              </article>  
+              <article class="mt-5 d-flex justify-content-between" >
+                <h2>Top Comments(7)</h2>
+                <button type="button" class="btn btn-light comments_button--subscribe">Subscribe</button>
+              </article>
+                            
+              <article class="mt-3 d-flex justify-content-between" >
+                <img class="rounded-circle comment__photo--subscribe" src="https://res.cloudinary.com/practicaldev/image/fetch/s--9uUFz6nX--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1081123/9f000bfd-4db6-49fb-9935-8702d18d4af5.jpeg" alt="">
+                <div class="form-floating comments__textarea">
+                  <textarea class="form-control " placeholder="Leave a comment here" id="floatingTextarea" ></textarea>
+                  <label for="floatingTextarea">Add to the discussion</label>
+                </div>
+              </article>
+              <article class="mt-5 d-flex">
+                <img class="rounded-circle comments__img--compu " src="https://res.cloudinary.com/practicaldev/image/fetch/s--QnB2p2bY--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1078718/e13ba47c-f025-49dd-91a1-685ad9513a50.png" alt="">
+                <section class="ms-3 mt-3">
+                  <div >
+                    <p><span>Alex</span>  <span>.</span> <span>Edited on May 13 </span></p>
+                    <p>Geat menu!</p>
+                    <p>Is it possible to fix the effect of increasing the distance between items when you enlarge the window horizontally in mobile?</p>
+                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--MqmQfU0n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/urkkv6gnbnlctv7s4vk7.png" alt="">
+                    
+                  </div>
+                </section>
+              </article> -->
+
+          </main>
+          <aside class="col-xl-3 d-none  d-xl-block mt-3 " >
+            <section>
+              <article class="aside__margingtop--blue">
+                <div class="aside__margingtop--blue" ></div>
+                
+                <img  src="https://res.cloudinary.com/practicaldev/image/fetch/s--hCHv9XnP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/515396/61d796b8-f5ce-468b-8cb5-808b2bbb9279.jpeg" alt="" class="rounded-circle  asideright__photo--top">
+               
+                <h4 class="aside__name--autor">Mads Stoumann</h4>
+                <button type="button" class="btn btn-primary btn-lg mt-5 aside__botton--follow">Follow</button>
+                <p>
+                  I'm a web developer, graphic designer, type designer, musician, comicbook-geek, LEGO-collector, food lover … as well as husband and father, located just south of Copenhagen, Denmark.
+                </p> 
+                <div>
+                <h5>LOCATION</h5> 
+                <p>Copenhagen</p>
+                <h5>WORK</h5>
+                <p>Co-Founder at Perfection.DEV</p>
+                <h5>JOINED</h5>
+                <p>16 nov 2020</p>
+                </div>
+
+                <article class="mt-5">
+                  <h6 class="aside_anchor--style--name">More from <a href="">Mads Stoumann</a></h6>
+                  <p class="aside_anchor--style"><a href="">CSS Components</a></p>
+                  <p>#css #showdev #webdev</p>
+                  <p class="aside_anchor--style"> <a href="">Dark Mode in 3 Lines of CSS and Other Adventures</a></p>
+                  <p>#css #showdev #webdev</p>
+
+
+
+                </article>
+                
+              </article>
+                          
+            </section> 
+             
+           
+
+            
+
+          
+
+          </aside>
+        </div>
+    </div>
+  
+  
+<footer class="container-fluid p-3 p-md-5  ">
+      <div class="footer-container lh-base row-gap-3 m-1 m-md-0 d-flex flex-column">
+          <p class="footer-rev m-0 d-block text-center">
+          <a href="" class="footer-rev__bold-a fw-semibold link-underline link-underline-opacity-0 link-underline-opacity-75-hover">DEV Community</a>
+          — A constructive and inclusive social network for software developers. With you every step of your journey.        
+        </p>
+        <ul class="footer-list p-0 m-0 d-flex flex-wrap row-gap-3 justify-content-center list-inline">
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Home </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Listings </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Podcasts </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Videos </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Tags </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> FAQ </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Forem Shop </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Sponsors </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> About </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Contact </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Guides </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Software comparisons </a>
+          </li>
+        </ul>
+        <ul class="footer-list p-0 m-0 d-flex flex-wrap justify-content-center list-inline">
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Code of Conduct </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Privacy Policy </a>
+            <span class="mid-dot rounded-circle bg-dark"></span>
+          </li>
+          <li class="footer-list__item d-flex align-items-center list-inline-item ">
+            <a class="normal-anchor text-decoration-none" href=""> Terms of use </a>
+          </li>
+        </ul>
+        <div class="credits-container">
+          <p class="footer-credits m-0 d-block text-center">
+            Built on
+          <a class="normal-anchor link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="">Forem</a>
+          — the
+          <a class="normal-anchor link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="">open source</a>
+          software that powers
+          <a class="normal-anchor link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="">DEV</a>
+          and other inclusive communities.
+        </p>
+        <p class="footer-credits m-0 d-block text-center">
+          Made with love and
+          <a class="normal-anchor link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="">Ruby on Rails.</a>
+          DEV Community © 2016 - 2023.
+        </p>
+      </div>
+      </div>
+</footer>   
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,58 @@
+.crayons-avatar__image {
+    border-radius: 20px;
+    height: 27px;
+    width: 27px;
+    margin-right: 10px;
+  }
+  
+#login_card {
+    width: 50vw;
+    display: flex;
+    align-items: start;
+
+    padding: 40px;
+  }
+ 
+#social_btn {
+    width: 60%;
+}
+
+#form_card {
+    width: 60%;
+}
+
+#submit_button {
+    width: 100%;
+    --bs-btn-font-weight: 700
+    
+}
+
+.footer__container-list-link {
+    margin-right: 25px;
+  }
+  
+#buttonforsearch {
+    left: 430px;
+  }
+  
+#secondary__navbar {
+    right: 40px;
+    top: 10px;
+  }
+  
+.footer__container {
+    position: relative;
+    height: 230px;
+    top: 100px;
+  }
+  
+.btn__link-create {
+    text-decoration: none;
+  }
+  
+.btn__link-create:hover {
+    text-decoration: underline;
+    color: white;
+  }
+  
+/*# sourceMappingURL=styles.css.map */
